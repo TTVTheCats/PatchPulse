@@ -1,0 +1,50 @@
+.button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #333;
+      color: rgb(255, 255, 255);
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+   .button:hover {
+      background-color: #1c1c1c;
+    }
+
+    body {
+        background-color: rgb(39, 39, 39);
+      }
+      
+p {
+    color: rgb(255, 255, 255);
+    
+    }
+
+h1 {
+    color: rgb(255, 255, 255);
+    }
+
+        body {
+            text-align: center; /* center all text */
+          }
+          header {
+            background-color: #333; /* dark gray background */
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center; /* center header text */
+          }
+          header h1 {
+            color: #ffffff; /* white text */
+            margin: 0;
+          }
+          main {
+            text-align: center; /* center main content */
+          }
+         .button {
+            display: inline-block; /* make buttons inline */
+            margin: 10px; /* add some margin between buttons */
+          }
+

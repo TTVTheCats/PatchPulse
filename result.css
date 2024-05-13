@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(39, 39, 39);
+  }
+  
+p {
+color: rgb(255, 255, 255);
+background-color: #333; /* dark gray background */
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center; /* center all text */
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    text-align: center; /* center all text */
+    }
