@@ -1,0 +1,32 @@
+
+
+nav {
+    background-color: #242424;
+    padding: 12px;
+    margin-right: -20px;
+    text-align: center;
+    
+}
+
+ul {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    
+}
+
+li {
+    display: inline;
+    margin-right: 60px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Lexend1', sans-serif;
+    
+}
+
+a:hover {
+    color: rgb(81, 81, 81);
+}

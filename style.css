@@ -4,15 +4,15 @@
       margin: 10px;
       background-color: #333;
       color: rgb(255, 255, 255);
-      border: none;
-      border-radius: 10px;
+      border: 1px solid white;
+      border-radius: 12px;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 18px;
       cursor: pointer;
     }
    .button:hover {
       background-color: #1c1c1c;
-    }
+    } 
 
     body {
         background-color: rgb(39, 39, 39);
@@ -20,25 +20,32 @@
       
 p {
     color: rgb(255, 255, 255);
-    
     }
+
+h2 {
+
+  height: 400px;
+  background-size: 110% 100%;
+  width: 100%;
+  margin-top: -7px;
+  margin-left: -7px;
+  margin-right: -15px;
+  text-align: center;
+  padding-right: 15px;
+}
 
 h1 {
     color: rgb(255, 255, 255);
     }
-
-        body {
-            text-align: center; /* center all text */
-          }
           header {
             background-color: #333; /* dark gray background */
-            border-radius: 10px;
+
             padding: 20px;
             text-align: center; /* center header text */
           }
           header h1 {
             color: #ffffff; /* white text */
-            margin: 0;
+            margin: 0px;
           }
           main {
             text-align: center; /* center main content */
@@ -46,5 +53,40 @@ h1 {
          .button {
             display: inline-block; /* make buttons inline */
             margin: 10px; /* add some margin between buttons */
+            margin-bottom: 160px;
           }
 
+/* Creation of the style header for the border of the title box */
+header {
+  border: 3px solid rgb(255, 255, 255);
+  padding: 9px;
+  display: inline-block;
+  margin-bottom: 60px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+/* Creation of style h3 */
+h3 {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-family: 'Lexend1', sans-serif;
+}
+
+/* Font importation in the css */
+@font-face {
+  font-family: 'Lexend1';
+  src: url('Lexend-VariableFont_wght.woff') format('woff2'),
+       url('Lexend-VariableFont_wght.woff') format('woff');
+  /* Additional font properties (like font-weight and font-style) can be added here */
+}
+
+/* Color white for the hamburger icon */
+svg {
+  color: #ffffff;
+  position: absolute;
+}
+/* Change of color when hamburger icon hovered */
+svg:hover {
+  color: rgb(81, 81, 81);
+}

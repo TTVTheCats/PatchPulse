@@ -1,16 +1,18 @@
+p {
+    font-family: 'Lexend1', sans-serif;
+    color: #fff;
+    background-color: #333; /* dark gray background */
+    padding: 12px;
+    text-align: left; /* left header text */
+    border-radius: 12px;
+}
+
 body {
     background-color: rgb(39, 39, 39);
   }
-  
-p {
-color: rgb(255, 255, 255);
-background-color: #333; /* dark gray background */
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center; /* center all text */
-}
 
 h1 {
-    color: rgb(255, 255, 255);
-    text-align: center; /* center all text */
-    }
+    font-family: 'Lexend1', sans-serif;
+    color: #fff;   
+
+}
