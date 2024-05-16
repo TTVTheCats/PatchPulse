@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="result.css">
+    <title>Leaks</title>
+</head>
+<body>
+    <h1><strong>Browser Info</strong></h1>
+
+    <!-- Altre informazioni -->
+    <p><strong>Supporto ai Web Workers:</strong> <span id="webWorkersSupported">Caricamento...</span></p>
+    <p><strong>Supporto alle Media Queries:</strong> <span id="mediaQueriesSupported">Caricamento...</span></p>
+    <p><strong>Informazioni sulla posizione geografica:</strong> <span id="geolocationInfo">Caricamento...</span></p>
+    <!-- Mappa -->
+    <iframe id="mapFrame" width="50%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="display: none;" src=""></iframe>
+
+    <p><strong>Supporto ai sensori:</strong> <span id="sensorsSupported">Caricamento...</span></p>
+
+    <p><strong>Frequenza della CPU:</strong> <span id="cpuFrequency">Caricamento...</span></p>
+    <p><strong>Dettagli sui protocolli di sicurezza:</strong> <span id="securityProtocols">Caricamento...</span></p>
+  
+    <!-- Aggiunta -->
+    <p><strong>Configurazione del Proxy:</strong> <span id="proxyConfiguration">Caricamento...</span></p>
+
+    
+
+    <script>
+        // Funzione per verificare il supporto ai Web Workers
+        function checkWebWorkersSupport() {
+            const webWorkersSupported = typeof(Worker) !== 'undefined';
+            const webWorkersSupportedElement = document.getElementById('webWorkersSupported');
+
+            if (webWorkersSupportedElement) {
+                webWorkersSupportedElement.innerText = (webWorkersSupported ? 'Sì' : 'No');
+            } else {
+                console.error('Elemento con id "webWorkersSupported" non trovato.');
+            }
+        }
+
+        // Funzione per verificare il supporto alle Media Queries
+        function checkMediaQueriesSupport() {
+            const mediaQueriesSupported = window.matchMedia('(pointer: fine)').matches;
+            const mediaQueriesSupportedElement = document.getElementById('mediaQueriesSupported');
+
+            if (mediaQueriesSupportedElement) {
+                mediaQueriesSupportedElement.innerText = (mediaQueriesSupported ? 'Sì' : 'No');
+            } else {
+                console.error('Elemento con id "mediaQueriesSupported" non trovato.');
+            }
+        }
+
+        // Funzione per ottenere informazioni sulla posizione geografica
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                const geolocationInfoElement = document.getElementById('geolocationInfo');
+                if (geolocationInfoElement) {
+                    geolocationInfoElement.innerText = 'Geolocalizzazione non supportata dal browser.';
+                } else {
+                    console.error('Elemento con id "geolocationInfo" non trovato.');
+                }
+            }
+        }
+
+        function showPosition(position) {
+            const geolocationInfoElement = document.getElementById('geolocationInfo');
+            const mapFrame = document.getElementById('mapFrame');
+            if (geolocationInfoElement && mapFrame) {
+                let Latitude = position.coords.latitude;
+                let Longitude = position.coords.longitude;
+                
+                geolocationInfoElement.innerText = 'Latitudine: ' + position.coords.latitude + '°, Longitudine: ' + position.coords.longitude + '°';
+                
+                // Costruisci l'URL dell'iframe utilizzando le variabili di latitudine e longitudine
+                var mapUrl = "https://www.openstreetmap.org/export/embed.html?bbox=";
+                mapUrl += (Longitude - 0.01) + "," + (Latitude - 0.01) + "," + (Longitude + 0.01) + "," + (Latitude + 0.01);
+                mapUrl += "&layer=mapnik&marker=" + Latitude + "," + Longitude;
+
+                // Imposta l'attributo src dell'iframe con l'URL della mappa
+                mapFrame.setAttribute('src', mapUrl);
+                // Mostra la mappa
+                mapFrame.style.display = 'block';
+            } else {
+                console.error('Elemento con id "geolocationInfo" o "mapFrame" non trovato.');
+            }
+        }
+
+        function showError(error) {
+            const geolocationInfoElement = document.getElementById('geolocationInfo');
+            if (geolocationInfoElement) {
+                geolocationInfoElement.innerText = 'Errore durante l\'ottenimento della posizione: ' + error.message;
+            } else {
+                console.error('Elemento con id "geolocationInfo" non trovato.');
+            }
+        }
+
+        // Funzione per verificare il supporto ai sensori
+        function checkSensorSupport() {
+            const accelerometerSupported = 'LinearAccelerationSensor' in window ? 'Accelerometro' : 'N/D';
+            const gyroscopeSupported = 'Gyroscope' in window ? 'Giroscopio' : 'N/D';
+            const magnetometerSupported = 'Magnetometer' in window ? 'Magnetometro' : 'N/D';
+            const sensorsSupportedElement = document.getElementById('sensorsSupported');
+
+            if (sensorsSupportedElement) {
+                sensorsSupportedElement.innerText = 'Accelerometro: ' + accelerometerSupported + ', Giroscopio: ' + gyroscopeSupported + ', Magnetometro: ' + magnetometerSupported;
+            } else {
+                console.error('Elemento con id "sensorsSupported" non trovato.');
+            }
+        }
+
+        // Funzione per ottenere la frequenza della CPU
+        function getCPUFrequency() {
+            const cpuFrequency = navigator.hardwareConcurrency ? navigator.hardwareConcurrency + " GHz" : "N/D";
+            const cpuFrequencyElement = document.getElementById('cpuFrequency');
+
+            if (cpuFrequencyElement) {
+                cpuFrequencyElement.innerText = cpuFrequency;
+            } else {
+                console.error('Elemento con id "cpuFrequency" non trovato.');
+            }
+        }
+
+        // Funzione per ottenere dettagli sui protocolli di sicurezza
+        function getSecurityProtocols() {
+            const securityProtocols = "TLS 1.2, TLS 1.3";
+            const securityProtocolsElement = document.getElementById('securityProtocols');
+
+            if (securityProtocolsElement) {
+                securityProtocolsElement.innerText = securityProtocols;
+            } else {
+                console.error('Elemento con id "securityProtocols" non trovato.');
+            }
+        }
+
+        // Funzione per ottenere la configurazione del Proxy
+        function getProxyConfiguration() {
+            const proxyConfig = navigator.connection ? navigator.connection.effectiveType : "N/D";
+            const proxyConfigElement = document.getElementById('proxyConfiguration');
+
+            if (proxyConfigElement) {
+                proxyConfigElement.innerText = proxyConfig;
+            } else {
+                console.error('Elemento con id "proxyConfiguration" non trovato.');
+            }
+        }
+
+        // Chiama le funzioni all'avvio della pagina
+        checkWebWorkersSupport();
+        checkMediaQueriesSupport();
+        getLocation();
+        checkSensorSupport();
+        getCPUFrequency();
+        getSecurityProtocols();
+        getProxyConfiguration();
+    </script>
+
+
+</body>
+</html>
