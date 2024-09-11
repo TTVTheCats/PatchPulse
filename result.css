@@ -1,5 +1,9 @@
 body {
     background-color: rgb(39, 39, 39);
+    margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   }
   
 p {
@@ -20,3 +24,50 @@ h1 {
     iframe {
       margin-left: 25% ; 
     }
+  
+/*
+.indietro{
+  text-align: center;
+  font-size: 10px;
+  margin-top: 0px;
+  margin-left: 10px;
+  color: white;
+  width: 5%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 3px solid rgb(255, 255, 255);
+}
+*/
+
+@font-face {
+  font-family: 'Lexend1';
+  src: url('Lexend-VariableFont_wght.woff') format('woff2'),
+       url('Lexend-VariableFont_wght.woff') format('woff');
+}
+
+svg {
+  color: #ffffff;
+  position: absolute;
+  left: 0; /* Assicura che SVG non esca dal bordo */
+}
+
+svg:hover {
+  color: rgb(81, 81, 81);
+}
+
+footer {
+  color: white;
+  text-align: center;
+  padding: 30px; /* Aumenta spessore */
+  background-color: #333;
+  margin-top: auto; /* footer in fondo */
+  width: 100%; /* larghezza */
+  box-sizing: border-box; /* Includi padding e bordo nella larghezza totale */
+}
+
+.privacy{
+  margin-right: 50px;
+  margin-left: 50px;
+  text-align: justify;
+  line-height: 1.8;
+}

@@ -5,10 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="result.css">
+    <link rel="stylesheet" type="text/css" href="navbar1.css">
     <title>Leaks</title>
 </head>
+
+<nav>
+	<!-- Creation of a nav bar -->
+    <ul>
+		<!-- Nav bar elements -->
+        <li><a href="homePage.html">Home</a></li>
+        <li><a href="https://github.com/TTVTheCats/SecurityTesting" target="_blank" rel="noopener noreferrer">Open Source</a></li>
+        <li><a href="xssTesting.html">XSS testing</a></li>
+        <li><a href="https://github.com/TTVTheCats/SecurityTesting/issues" target="_blank" rel="noopener noreferrer">Bugs?</a></li>
+
+		<!-- Hamburger icon and it's proprietes 
+		<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+			<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+		  </svg>
+          -->
+    </ul>
+</nav>
+
+
+
 <body>
     <h1><strong>Browser Info</strong></h1>
+
 
     <p><strong>Dimensioni Finestra Browser:</strong> <span id="windowSize">Caricamento...</span></p>
     <p><strong>Tipo di Browser:</strong> <span id="browserType">Caricamento...</span></p>
@@ -56,6 +78,11 @@
     <p><strong>Supporto alla Payment Request API:</strong> <span id="paymentRequestAPISupported">Caricamento...</span></p>
     <p><strong>Supporto alla Permissions API:</strong> <span id="permissionsAPISupported">Caricamento...</span></p>
     <p><strong>Compatibilità con HTML5 e CSS3:</strong> <span id="htmlCssSupport">Caricamento...</span></p>
+
+
+    <footer >
+        <p>Copyright &copy; 2024 CodeNest - <a href="PrivacyPolicy.html" >Privacy Policy</a></p> 
+    </footer>
 
     <script>
         // Funzione per ottenere le dimensioni della finestra del browser

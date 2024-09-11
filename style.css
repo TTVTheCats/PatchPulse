@@ -1,92 +1,112 @@
 .button {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 10px;
-      background-color: #333;
-      color: rgb(255, 255, 255);
-      border: 1px solid white;
-      border-radius: 12px;
-      text-decoration: none;
-      font-size: 18px;
-      cursor: pointer;
-    }
-   .button:hover {
-      background-color: #1c1c1c;
-    } 
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #333;
+  color: rgb(255, 255, 255);
+  border: 1px solid white;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+}
 
-    body {
-        background-color: rgb(39, 39, 39);
-      }
-      
+.button:hover {
+  background-color: #1c1c1c;
+}
+
+body {
+  background-color: rgb(39, 39, 39);
+  background-image: url('home1.jpg');
+  width: 100%;
+  min-height: 100vh; /* Almeno l'altezza della finestra */
+  text-align: center;
+  background-size: 110% 100%;
+  background-repeat: no-repeat;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  overflow-x: hidden; /* Evita il ridondante overflow a destra */
+  display: flex;
+  flex-direction: column;
+}
+
 p {
-    color: rgb(255, 255, 255);
-    }
+  color: rgb(255, 255, 255);
+  margin: 0;
+}
 
 h2 {
-
-  height: 400px;
-  background-size: 110% 100%;
-  width: 100%;
-  margin-top: -7px;
-  margin-left: -7px;
-  margin-right: -15px;
   text-align: center;
-  padding-right: 15px;
 }
 
 h1 {
-    color: rgb(255, 255, 255);
-    }
-          header {
-            background-color: #333; /* dark gray background */
+  color: rgb(255, 255, 255);
+}
 
-            padding: 20px;
-            text-align: center; /* center header text */
-          }
-          header h1 {
-            color: #ffffff; /* white text */
-            margin: 0px;
-          }
-          main {
-            text-align: center; /* center main content */
-          }
-         .button {
-            display: inline-block; /* make buttons inline */
-            margin: 10px; /* add some margin between buttons */
-            margin-bottom: 160px;
-          }
-
-/* Creation of the style header for the border of the title box */
 header {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
   border: 3px solid rgb(255, 255, 255);
-  padding: 9px;
   display: inline-block;
-  margin-bottom: 60px;
+  margin: 0 auto 60px auto; /* Centra e gestisce il margine in basso */
   padding-left: 100px;
   padding-right: 100px;
 }
 
-/* Creation of style h3 */
+header h1 {
+  color: #ffffff;
+  margin: 0;
+}
+
+main {
+  text-align: center;
+}
+
 h3 {
   color: rgb(255, 255, 255);
   font-size: 20px;
   font-family: 'Lexend1', sans-serif;
 }
 
-/* Font importation in the css */
 @font-face {
   font-family: 'Lexend1';
   src: url('Lexend-VariableFont_wght.woff') format('woff2'),
        url('Lexend-VariableFont_wght.woff') format('woff');
-  /* Additional font properties (like font-weight and font-style) can be added here */
 }
 
-/* Color white for the hamburger icon */
 svg {
   color: #ffffff;
   position: absolute;
+  left: 0; /* Assicura che SVG non esca dal bordo */
 }
-/* Change of color when hamburger icon hovered */
+
 svg:hover {
   color: rgb(81, 81, 81);
+}
+
+footer {
+  color: white;
+  text-align: center;
+  padding: 60px; /* Aumenta il padding se necessario */
+  background-color: #333;
+  margin-top: auto; /* Spinge il footer in fondo */
+  width: 100%; /* Assicura che il footer occupi tutta la larghezza del viewport */
+  box-sizing: border-box; /* Includi padding e bordo nella larghezza totale */
+}
+
+.privacy{
+  margin-right: 50px;
+  margin-left: 50px;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+/* Stili per l'elemento output (XSS TESTING) */
+#output {
+  color: rgb(255, 255, 255); /* Colore bianco per il testo */
+  margin: 20px 0; /* Margini superiori e inferiori */
+  padding: 10px; /* Padding interno */
 }

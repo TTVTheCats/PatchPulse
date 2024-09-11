@@ -1,43 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Verifica XSS</title>
-<script>
-function checkXSS() {
-    var isVulnerable = false;
-    
-    // Creiamo un elemento img e aggiungiamo un attributo onerror per eseguire uno script XSS
-    var img = document.createElement('img');
-    img.onerror = function() {
-        isVulnerable = true;
-        checkVulnerability();
-    };
-    img.src = ""; // Imposta una stringa vuota per evitare errori nella console del browser // oppure img.src = "doesnotexist";
-    document.body.appendChild(img);
-    
-    function checkVulnerability() {
-        var outputElement = document.getElementById("output");
-        if (isVulnerable) {
-            outputElement.innerHTML = "Il tuo browser è vulnerabile al Cross-Site Scripting (XSS).";
-        } else {
-            outputElement.innerHTML = "Il tuo browser non è vulnerabile al Cross-Site Scripting (XSS).";
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar1.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Verifica XSS</title>
+    <script>
+        function checkXSS() {
+            var isVulnerable = false;
+
+            // Creiamo un elemento img e aggiungiamo un attributo onerror per eseguire uno script XSS
+            var img = document.createElement('img');
+            img.onerror = function() {
+                isVulnerable = true;
+                checkVulnerability();
+            };
+            img.src = ""; // Imposta una stringa vuota per evitare errori nella console del browser
+            document.body.appendChild(img);
+
+            function checkVulnerability() {
+                var outputElement = document.getElementById("output");
+                if (isVulnerable) {
+                    outputElement.innerHTML = "Il tuo browser è vulnerabile al Cross-Site Scripting (XSS).";
+                } else {
+                    outputElement.innerHTML = "Il tuo browser non è vulnerabile al Cross-Site Scripting (XSS).";
+                }
+            }
+
+            // Funzione di gestione degli errori
+            window.onerror = function(message, source, lineno, colno, error) {
+                console.error("Si è verificato un errore:", message);
+                // Puoi aggiungere ulteriori gestioni degli errori qui, se necessario
+            };
         }
-    }
-    
-    // Funzione di gestione degli errori
-    window.onerror = function(message, source, lineno, colno, error) {
-        console.error("Si è verificato un errore:", message);
-        // Puoi aggiungere ulteriori gestioni degli errori qui, se necessario
-    };
-}
-</script>
+
+        window.onload = function() {
+            checkXSS();
+        }
+    </script>
 </head>
 <body>
-<h1>Verifica XSS</h1>
-<p>Clicca sul pulsante per verificare se il tuo browser è vulnerabile al Cross-Site Scripting (XSS):</p>
-<button onclick="checkXSS()">Verifica</button>
-<div id="output"></div>
+    <nav>
+        <!-- Creation of a nav bar -->
+        <ul>
+            <!-- Nav bar elements -->
+            <li><a href="homePage.html">Home</a></li>
+            <li><a href="https://github.com/TTVTheCats/SecurityTesting" target="_blank" rel="noopener noreferrer">Open Source</a></li>
+            <li><a href="xssTesting.html">XSS testing</a></li>
+            <li><a href="https://github.com/TTVTheCats/SecurityTesting/issues" target="_blank" rel="noopener noreferrer">Bugs?</a></li>
+        </ul>
+    </nav>
+
+    <h1>Verifica XSS</h1>
+    <p>Il test viene eseguito automaticamente. I risultati verranno mostrati di seguito:</p>
+
+    <div id="output"></div>
+
+    <footer>
+        <p>Copyright &copy; 2024 CodeNest - <a href="PrivacyPolicy.html">Privacy Policy</a></p>
+    </footer>
 </body>
 </html>
