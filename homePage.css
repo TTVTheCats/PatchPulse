@@ -1,0 +1,97 @@
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;  
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    align-self: center;
+}
+
+.button:hover {
+    background-color: #1c1c1c;
+}
+
+
+body {
+    background-color: #171717;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Vanguard';
+    font-size: 120px;
+    letter-spacing: 2px;
+    margin-top: 0px;
+    align-items: start;
+}
+
+nav {
+    background-color: #171717;
+    margin-right: 0px;
+    text-align: center;
+    letter-spacing: 1px;
+    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+}
+
+p1 {
+    color: white;
+    padding: 40px;
+    font-family: 'Vanguard';
+    font-size: 200%;
+}
+
+@font-face {
+    font-family: 'Vanguard';
+    src:url('Fontspring-DEMO-vanguardcf-demibold.otf') format('woff2'),
+        url('Fontspring-DEMO-vanguardcf-demibold.otf') format('woff');
+}
+
+.mainIcon{
+    transform: scale(0.7);
+    filter: invert(99%) sepia(0%) saturate(7496%) hue-rotate(357deg) brightness(111%) contrast(100%);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Regola la distanza verticale dal contenuto superiore */
+}
+
+.WaveLeft, .WaveRight {
+    transform: scale(1);
+}
+
+.WaveLeft {
+    margin-left: 20px;
+    margin-top: 90px;
+}
+
+.WaveRight {
+    margin-right: 20px;
+    margin-top: 90px;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Vanguard';
+    font-size: 100px;
+    margin: 0; /* Rimuove il margine per evitare spazi extra */
+    padding: 0 20px; /* Aggiungi un po' di spazio ai lati del testo */
+}
+

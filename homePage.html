@@ -1,52 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<!-- Imporation of the css styles -->
-	<link rel="stylesheet" href="navbar1.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="homePage.css">
+    <head>
+        <nav>
+            <ul>
+                <li><p1>GITHUB</p1></li>
+                <li><p1>SETTINGS</p1></li>
+                <li><img class="mainIcon" src="PatchPulseLogo.svg" alt="CentredLogo"/></li>
+                <li><p1>OTHERS</p1></li>
+                <li><p1>OTHERS</p1></li>
+            </ul>
+        </nav>
+    </head>
+    <br><br><br><br>
+    <body>
+        <!-- Aggiungi il contenitore per Flexbox -->
+        <div class="container">
+            <img class="WaveLeft" src="Waves.svg" alt="LateralWaves"/>
+            <h1>PATCHPULSE YOU WILL <br>FEEL SAFE NOW</h1>
+                <a href="browserInfo.html" class="button"><h1 class ="info">Browser Info</h1></a>
+                <a href="browserLeaks.html" class="button"><h1 class ="leaks">Browser Leaks</h1></a>
+            <img class="WaveRight" src="Waves.svg" alt="LateralWaves"/>
+        </div>
 
-	<!-- Name of the Tab -->
-	<title>Home Page</title>
+        <main>
+            <!-- Nuovo contenitore per i pulsanti -->
+        <div class="main-buttons">
+            <a href="browserInfo.html" class="button">Browser Info</a>
+            <a href="browserLeaks.html" class="button">Browser Leaks</a>
+        </div>
 
-</head>
-<nav>
-	<!-- Creation of a nav bar -->
-    <ul>
-		<!-- Nav bar elements -->
-        <li><a href="homePage.html">Home</a></li>
-        <li><a href="https://github.com/TTVTheCats/SecurityTesting" target="_blank" rel="noopener noreferrer">Open Source</a></li> <!-- target="_blank" = Apre in un'altra finestra - rel="noopener noreferrer" = Impedisce l'invio dell'header Referer alla nuova pagina, migliorando la privacy. -->
-        <li><a href="xssTesting.html">XSS testing</a></li>
-        <li><a href="https://github.com/TTVTheCats/SecurityTesting/issues" target="_blank" rel="noopener noreferrer">Bugs?</a></li>
-
-		<!-- Hamburger icon and it's proprietes 
-		<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-			<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-		  </svg>
-		  -->
-    </ul>
-</nav>
-<body>
-	<!-- header section -->
-	<br> <!-- br add space where it's placed -->
-	<header>
-		<!-- Title -->
-		<p><h1>Vulnerability</h1></p>
-	</header>
-
-	<main>
-		<!-- Description -->
-		<h3>Questo sito permette di scoprire tutte le vulnerabilità presenti nel browser</h3>
-	</main>
-
-	<!-- Testing buttons -->
-	<main>
-		<a href="browserInfo.html" class="button">Browser Info</a>
-  		<a href="browserLeaks.html" class="button">Browser Leaks</a>
-	</main>
-	<!-- End of the page -->
-<footer >
-	<p>Copyright &copy; 2024 CodeNest - <a href="PrivacyPolicy.html" >Privacy Policy</a></p> 
-</footer>
-	
-</body>
+           <!-- 
+            <a href="browserLeaks.html" class="button">Browser Leaks</a>
+            <a href="browserInfo.html" class="button">Browser Info</a>
+            -->
+        </main>
+    </body>
 </html>
