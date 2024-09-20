@@ -9,6 +9,8 @@
     cursor: pointer;
     text-align: center;
     align-self: center;
+    font-family: 'Vanguard';
+    font-size: 100px;
 }
 
 .button:hover {
