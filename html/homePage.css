@@ -33,8 +33,11 @@ nav {
     margin-right: 0px;
     text-align: center;
     letter-spacing: 1px;
-    
 }
+
+a {
+    text-decoration: none; /* Per i link, in modo da non mettere la sottolineatura sotto*/
+  }
 
 ul {
     list-style-type: none;
