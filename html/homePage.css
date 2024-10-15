@@ -1,0 +1,185 @@
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;  
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    align-self: center;
+    font-family: 'Vanguard';
+    font-size: 100px;
+}
+
+.button:hover {
+    background-color: #1c1c1c;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+
+body {
+    background-color: #171717;
+}
+
+nav {
+    background-color: #171717;
+    margin-right: 0px;
+    text-align: center;
+    letter-spacing: 1px;
+    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+li {
+    display: inline;
+    text-align: center;
+}
+
+p1 {
+    color: white;
+    padding: 40px;
+    font-family: 'Vanguard';
+    font-size: 400%;
+}
+
+@font-face {
+    font-family: 'Vanguard';
+    src:url('../fonts/Fontspring-DEMO-vanguardcf-demibold.otf') format('woff2'),
+        url('../fonts/Fontspring-DEMO-vanguardcf-demibold.otf') format('woff');
+}
+
+@font-face {
+    font-family: 'RobotoM';
+    src:url('../fonts/Roboto-Medium.ttf') format('woff')
+}
+
+.mainIcon{
+    transform: scale(0.7);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Regola la distanza verticale dal contenuto superiore */
+}
+
+.WaveLeft, .WaveRight {
+    transform: scale(1);
+}
+
+.WaveLeft {
+    margin-left: 20px;
+    margin-top: 90px;
+}
+
+.WaveRight {
+    margin-right: 20px;
+    margin-top: 90px;
+}
+
+
+h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Vanguard';
+    font-size: 950%;
+    margin: 0; /* Rimuove il margine per evitare spazi extra */
+    padding: 0 20px; /* Aggiungi un po' di spazio ai lati del testo */
+}
+
+p2 {
+    color: white;
+    font-family: 'RobotoM';
+}
+
+.p3 {
+    color: gray; /* Set text color to gray */
+    font-family: 'RobotoM'; /* Maintain font family */
+    font-size: 14px; /* Adjust size if needed */
+}
+
+.p3 .signIn {
+    color: gray; /* Set link color to gray */
+    text-decoration: none; /* Remove underline if desired */
+}
+
+.p3 .signIn:visited {
+    color: gray; /* Set visited link color to gray */
+}
+
+.p3 .signIn:hover {
+    color: #FDBE00; /* Set hover color for the link */
+}
+
+.form-container {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #171717;
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+    margin: auto;
+}
+
+.form1 {
+    margin: 10px 0;
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    background-color: #171717;
+    border: 2px solid white;
+    color: #ffffff;
+}
+
+.form1:hover {
+    background-color: #353434;
+}
+
+input[type="submit"], input[type="checkbox"] {
+    background-color: #171717;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #444;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus, input[type="password"]:focus, input[type="submit"]:focus {
+    border: 2px solid #FDBE00; /* Custom border color on focus */
+    box-shadow: 0 0 8px 2px #FDBE00; /* Custom glow effect */
+    outline: none; /* Remove default outline */
+}
+
+.hyperLinks {
+    color: white;
+}
+
+.hyperLinks:hover {
+    color: #FDBE00;
+}
+
+::placeholder {
+    text-align: center;
+    color: #ffffff;
+    opacity: 1;
+}

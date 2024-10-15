@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    
+    <link rel="stylesheet" type="text/css" href="homePage.css">
+    <head>
+        <nav>
+            <ul>
+                <li><p1>GITHUB</p1></li>
+                <li><p1>SETTINGS</p1></li>
+                <li><pi><img class="mainIcon" src="../svgs/PatchPulseLogo.svg" alt="CentredLogo"/></pi></li>
+                <li><p1>OTHERS</p1></li>
+                <li><p1>LOGIN</p1></li>
+            </ul>
+        </nav>
+    </head>
+
+    <br><br><br><br>
+
+    <body>
+
+        <div class="form-container">
+
+            <form action="../dataBase/save_user.php" method="post">
+
+                <input type="text" name="NameOfUser" id="" placeholder="name" required class="form1"><br />
+
+                <input type="email" name="EmailOfUser" id="" placeholder="email" required class="form1"><br />
+
+                <input type="password" name="PasswordOfUserUnCrypt" id="" placeholder="password" required class="form1"><br />
+
+                <p2>I've read the and agree with the <a href="TermsAndConditions/GPLv3.html" class="hyperLinks">Terms & Conditions </a> </p2>
+
+                <input type="checkbox" name="AgreeTerms" id="" required><br />
+
+                <input type="submit" name="" id="" value="Sign Up" class="form1">
+                
+            </form>
+            <p class="p3"><a href="TermsAndConditions/GPLv3.html" class="signIn">Already have an account</a></p>
+        </div>
+
+    </body>
+
+</html>
