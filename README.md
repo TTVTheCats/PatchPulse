@@ -17,6 +17,6 @@ Thanks
 - [ ] Choosing if and what framework to use
   - [ ] [GrapeJS](https://grapesjs.com/)
   - [ ] [Pagekit](https://github.com/uatrend/pagekit)
-- [ ] Chosing if use [bootstrap](https://getbootstrap.com/)
+- [X] Chosing if use [bootstrap](https://getbootstrap.com/)
 - [ ] Make the webpage dynamic (Tablet, Desktops, Phones)
 - [ ] Add a link to scan websites (Value it's security)
