@@ -27,13 +27,65 @@
 body {
     background-color: #171717;
 }
-
+/*
 nav {
     background-color: #171717;
     margin-right: 0px;
     text-align: center;
     letter-spacing: 1px;
 }
+*/
+
+nav {
+    display: flex; /* Usa Flexbox per il nav */
+    justify-content: center; /* Centra il contenuto orizzontalmente */
+    padding: 10px; /* Aggiungi padding se necessario */
+}
+
+.nav-container {
+    display: flex; /* Usa Flexbox per il container */
+}
+
+nav ul {
+    list-style-type: none; /* Rimuove i puntini dalla lista */
+    padding: 0; /* Rimuove il padding predefinito */
+    margin: 0; /* Rimuove il margine predefinito */
+    display: flex; /* Usa Flexbox per la disposizione in linea */
+    align-items: center; /* Allinea verticalmente gli elementi al centro */
+    justify-content: center; /* Centra il contenuto */
+    width: 100%; /* Assicura che l'ul utilizzi tutta la larghezza disponibile */
+    flex-wrap: wrap; /* Permette agli elementi di andare a capo se necessario */
+}
+
+nav .nav-item {
+    flex: 1; /* Fai sì che ogni titolo occupi lo stesso spazio */
+    min-width: 100px; /* Imposta una larghezza minima per evitare che diventino troppo piccoli */
+    text-align: center; /* Centra il testo all'interno dell'elemento */
+    color: white; /* Colore del testo */
+    font-family: 'Vanguard'; /* Font per i titoli */
+    font-size: 400%; /* Dimensione del font */
+    margin: 0 10px; /* Aggiungi margine orizzontale per creare spazio tra i titoli */
+    
+}
+
+nav .logo-container {
+    flex: 0 0 auto; /* Assicura che il logo non cresca */
+}
+
+nav a {
+    text-decoration: none; /* Rimuove la sottolineatura dai link */
+    color: inherit; /* Mantiene il colore del testo ereditato */
+}
+
+nav a:hover {
+    color: #FDBE00; /* Set hover color for the link */
+}
+
+nav img.mainIcon {
+    height: 150px; /* Imposta l'altezza dell'immagine, modifica a piacere */
+    width: auto; /* Mantiene le proporzioni dell'immagine */
+}
+
 
 a {
     text-decoration: none; /* Per i link, in modo da non mettere la sottolineatura sotto*/
@@ -128,8 +180,8 @@ p2 {
 }
 
 .form-container {
-    width: 500px;
-    height: 300px;
+    width: 550px;
+    height: 370px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,6 +203,11 @@ p2 {
     background-color: #171717;
     border: 2px solid white;
     color: #ffffff;
+}
+
+.form-container h1 {
+    text-align: center;
+    font-size: 50px;
 }
 
 .form1:hover {
@@ -186,3 +243,23 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus, input[type=
     color: #ffffff;
     opacity: 1;
 }
+
+.fastScan h1{
+    color: white;
+    font-family: 'Vanguard';
+    font-size: 400%;
+}
+
+.fastScan p{
+    color: rgb(255, 255, 255);
+    background-color: #333; /* dark gray background */
+    border-radius: 10px;
+    padding: 20px;
+    margin-left:15%;
+    width: 70%;
+    text-align: center; /* center all text */
+}
+
+.fastScan iframe {
+    margin-left: 25% ; 
+  }
