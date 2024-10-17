@@ -1,9 +1,11 @@
 <?php
+session_start();  // Avvia la sessione
+
 // Connect to MySQL
-$servername = "localhost";  // Change if your database is on another server
-$username = "root";         // Your MySQL username
-$password = "";             // Your MySQL password
-$dbname = "user_registration";  // Your database name
+$servername = "localhost";  
+$username = "root";         
+$password = "";             
+$dbname = "users";  
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -18,28 +20,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = htmlspecialchars($_POST['EmailOfUser']);
     $password = htmlspecialchars($_POST['PasswordOfUserUnCrypt']);
 
-    // Prepare SQL statement to select user based on email
-    $stmt = $conn->prepare("SELECT password FROM users WHERE email = ?");
+    // Prepare SQL statement to check if the user exists
+    $stmt = $conn->prepare("SELECT id, password FROM users WHERE email = ?");
     $stmt->bind_param("s", $email);
 
-    // Execute the query
+    // Execute the statement
     $stmt->execute();
     $stmt->store_result();
 
-    // Check if the user exists
+    // Check if email exists in the database
     if ($stmt->num_rows > 0) {
-        // Bind result to a variable
-        $stmt->bind_result($hashed_password_from_db);
+        // Email exists, now check password
+        $stmt->bind_result($user_id, $hashed_password);
         $stmt->fetch();
 
-        // Verify the password
-        if (password_verify($password, $hashed_password_from_db)) {
-            echo "Login successful!";  // Redirect or set session, as needed
+        // Uncomment below if passwords are hashed
+        // if (password_verify($password, $hashed_password)) {
+        if ($password === $hashed_password) { // Remove this line if you are hashing passwords
+            // Store user ID or email in session
+            $_SESSION['user_id'] = $user_id;
+            $_SESSION['email'] = $email;
+            
+            echo "Credenziali giuste. Benvenuto!";
+            // Redirect to home or account page after login
+            header("Location: ../html/homePage.php");
+            exit();
         } else {
-            echo "Incorrect password.";
+            echo "Credenziali errate. Password non corretta.";
         }
     } else {
-        echo "No user found with that email.";
+        echo "Credenziali errate. Utente non trovato.";
     }
 
     // Close the statement and connection

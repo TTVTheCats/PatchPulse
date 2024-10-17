@@ -263,3 +263,18 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus, input[type=
 .fastScan iframe {
     margin-left: 25% ; 
   }
+
+.account p {
+    color: white;
+    font-size: 30px;
+}
+
+.account a {
+    color: white;
+    font-size: 20px;
+}
+
+.account a:hover {
+    color: #FDBE00;
+}
+

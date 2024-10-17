@@ -3,7 +3,7 @@
 $servername = "localhost";  // Change if your database is on another server
 $username = "root";         // Your MySQL username
 $password = "";             // Your MySQL password
-$dbname = "user_registration";  // Your database name
+$dbname = "users";  // Your database name
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -19,13 +19,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = htmlspecialchars($_POST['EmailOfUser']);
     $password = htmlspecialchars($_POST['PasswordOfUserUnCrypt']);
     $agree_terms = isset($_POST['AgreeTerms']) ? 1 : 0;
-
+/*
     // Hash the password
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
+*/
     // Prepare SQL statement
     $stmt = $conn->prepare("INSERT INTO users (name, email, password, agree_terms) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("sssi", $name, $email, $hashed_password, $agree_terms);
+    $stmt->bind_param("sssi", $name, $email, $password, $agree_terms);
 
     // Execute and check if successful
     if ($stmt->execute()) {
