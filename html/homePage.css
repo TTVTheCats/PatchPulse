@@ -266,7 +266,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus, input[type=
 
 .account p {
     color: white;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .account a {
@@ -276,5 +276,28 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus, input[type=
 
 .account a:hover {
     color: #FDBE00;
+}
+
+.change-password h2 {
+    font-size: 30px;
+    color: white;
+}
+
+.change-password label {
+    font-size: 15px;
+    color: white;
+}
+
+.change-password p {
+    font-size: 15px;
+    color: white;
+}
+
+hr {
+    width: 20%; /* Larghezza della linea */
+    border: none; /* Rimuove il bordo predefinito */
+    height: 2px; /* Spessore della linea */
+    background-color: white; /* Colore della linea */
+    margin: 0; /* Rimuove margini */
 }
 
