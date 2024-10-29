@@ -1,0 +1,52 @@
+.flex-container {
+    /* We first create a flex layout context */
+    display: flex;
+    
+    /* Then we define the flow direction 
+       and if we allow the items to wrap 
+     * Remember this is the same as:
+     * flex-direction: row;
+     * flex-wrap: wrap;
+     */
+    flex-flow: row wrap;
+    
+    /* Then we define how is distributed the remaining space */
+    justify-content: space-evenly;
+    
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    align-items: flex-end;
+    gap: 4vw;
+  }
+  
+  .flex-item {
+    padding: 5px;
+    margin-top: 10px;
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 4em;
+    text-align: center;
+    font-family: Vanguard;
+  }
+
+  @font-face {
+    font-family: 'Vanguard';
+    src:url('Fontspring-DEMO-vanguardcf-demibold.otf') format('woff2'),
+        url('Fontspring-DEMO-vanguardcf-demibold.otf') format('woff');
+}
+
+body {
+    background-color: #171717;
+}
+
+/* Medium screens */
+@media all and (max-width: 1251px) {
+    /* We tell both sidebars to share a row */
+    .flex-item { 
+        color: red;
+    }
+
+    
+  }
