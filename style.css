@@ -31,6 +31,17 @@
     font-family: Vanguard;
   }
 
+  .flex2-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+
+  }
+
+  .flex2-item {
+
+  }
+
   @font-face {
     font-family: 'Vanguard';
     src:url('Fontspring-DEMO-vanguardcf-demibold.otf') format('woff2'),
