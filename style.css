@@ -36,11 +36,11 @@
     src:url('Fontspring-DEMO-vanguardcf-demibold.otf') format('woff2'),
         url('Fontspring-DEMO-vanguardcf-demibold.otf') format('woff');
 }
-
+/*
 body {
     background-color: #171717;
 }
-
+*/
 /* Medium screens */
 @media all and (max-width: 1251px) {
     /* We tell both sidebars to share a row */
