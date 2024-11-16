@@ -38,20 +38,16 @@
 
   }
 
-  .flex2-itemGrow {
-    
-  }
-
   @font-face {
     font-family: 'Vanguard';
     src:url('Fontspring-DEMO-vanguardcf-demibold.otf') format('woff2'),
         url('Fontspring-DEMO-vanguardcf-demibold.otf') format('woff');
 }
-/*
+
 body {
     background-color: #171717;
 }
-*/
+
 /* Medium screens */
 @media all and (max-width: 1251px) {
     /* We tell both sidebars to share a row */
@@ -65,11 +61,22 @@ h1 {
   font-size: 8vw;
   font-family: Vanguard;
   text-align: center;
+  color: white;
 }
 
 a {
+
   text-decoration: none; /* Per i link, in modo da non mettere la sottolineatura sotto*/
   color: white;
   font-family: Vanguard;
   font-size: 4vw;
+}
+
+.bg {
+  color: rgb(29, 29, 29);
+}
+
+.vwImmageSizeble {
+  width: 15vw;  /* Use 'width' for resizing */
+  height: auto; /* Maintain aspect ratio */
 }
