@@ -11,21 +11,19 @@
     flex-flow: row wrap;
     
     /* Then we define how is distributed the remaining space */
-    justify-content: space-evenly;
+    justify-content: center;
     
     padding: 0;
     margin: 0;
     list-style: none;
     align-items: flex-end;
-    gap: 4vw;
+    gap: 30px;
   }
   
   .flex-item {
     padding: 4px;
     margin-top: 10px;
     line-height: 150px;
-    color: white;
-    font-weight: bold;
     font-size: 4em;
     text-align: center;
     font-family: Vanguard;
@@ -34,42 +32,52 @@
   .flex2-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
-
+    justify-content: space-between;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    gap: 5vh; /* Add gap between flex items */
   }
 
+/* ================================================================= */
+/* ============================== FONTS ============================ */
+/* ================================================================= */
+  
   @font-face {
     font-family: 'Vanguard';
     src:url('Fontspring-DEMO-vanguardcf-demibold.otf') format('woff2'),
         url('Fontspring-DEMO-vanguardcf-demibold.otf') format('woff');
-}
-
-body {
-    background-color: #171717;
-}
-
-/* Medium screens */
-@media all and (max-width: 1251px) {
-    /* We tell both sidebars to share a row */
-    .flex-item { 
-        color: red;
-    }
-
   }
 
+  @font-face {
+    font-family: 'RobotoM';
+    src:url('Roboto-Medium.ttf') format('woff')
+  }
+
+/* ================================================================= */
+
+body {
+    background-color: #111313;
+}
+
 h1 {
-  font-size: 8vw;
+  font-size: 7vw;
   font-family: Vanguard;
   text-align: center;
   color: white;
 }
 
-a {
 
+a {
   text-decoration: none; /* Per i link, in modo da non mettere la sottolineatura sotto*/
   color: white;
   font-family: Vanguard;
-  font-size: 4vw;
+  font-size: 3vw;
+}
+
+a:hover {
+  color: #FDBE00;
+  text-shadow: rgba(253,190,0,1) 0px 0px 20px;
+
 }
 
 .bg {
@@ -79,4 +87,192 @@ a {
 .vwImmageSizeble {
   width: 15vw;  /* Use 'width' for resizing */
   height: auto; /* Maintain aspect ratio */
+}
+
+.footer-item {
+  font-size: 2vw; /* Adjust this value as needed */
+  color: rgb(168, 168, 168);
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10vw;  /* Space between buttons */
+  width: 100%;  /* Full width of parent */
+}
+
+.button1 {
+  border: 3px solid white;  /* White border */
+  border-radius: 25px;  /* Rounded corners */
+  padding: 15px 30px;  /* Adjust padding for better button size */
+  background-color: transparent;  /* Ensure the background is transparent */
+  white-space: nowrap;  /* Prevent text wrapping */
+  font-size: 3vw;  /* Adjust font size as needed */
+  font-size: 4vw;
+  line-height: 1.3;
+}
+
+.footr {
+  background-color: #0e0e0e;
+}
+
+footer {
+  background-color: #0e0e0e;
+  
+}
+
+.mainIcon {
+  width: 200;  /* Use 'width' for resizing */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Medium screens */
+@media all and (max-width: 1251px) {
+  /* ... other rules ... */
+
+  .mainIcon {
+    width: 25vw;  /* Use 'width' for resizing */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .flex2-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh; /* Add gap between flex items */
+    padding-left: 0;
+    padding-right: 0;
+    
+  }
+
+  .flex-container {
+    align-items: center; /* Ensure items are centered vertically */
+    justify-content: center;
+  }
+
+  .vwImmageSizeble {
+    width: 100%;  /* Stretch to full width */
+    height: 18vw;
+    max-height: 20vh;  /* Limit height to 20% of viewport height */
+    object-fit: cover;  /* Ensure the image covers the area without distortion */
+  }
+
+  /* Add this class to your central content div in HTML */
+  .flex2-itemGrow {
+    order: 2;  /* Place the content in the middle */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Create a new container for buttons */
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10vw;  /* Space between buttons */
+    width: 100%;  /* Full width of parent */
+  }
+
+  .button1 {
+    border: 2px solid white;  /* White border */
+    border-radius: 25px;  /* Rounded corners */
+    padding: 15px 30px;  /* Adjust padding for better button size */
+    transition: all 0.3s ease;  /* Smooth transition for any changes */
+    background-color: transparent;  /* Ensure the background is transparent */
+    white-space: nowrap;  /* Prevent text wrapping */
+    font-size: 3vw;  /* Adjust font size as needed */
+    font-size: 8vw;
+    line-height: 1.3;
+  }
+
+  /* Target the first and last images specifically */
+  .flex2-container > img:first-child {
+    order: 1;
+  }
+
+  .flex2-container > img:last-child {
+    order: 3;
+  }
+
+  h1 {
+    font-size: 12vw;
+  }
+
+  .flex-item {
+    font-size: 5vw;
+    line-height: 1.9; /* Use a relative unit to maintain proportional line height */
+  }
+
+  .footer-item {
+    font-size: 3vw; /* Adjust this value for smaller screens */
+  }
+
+  .footr {
+    background-color: #0e0e0e;    
+  }
+
+  footer {
+    background-color: #0e0e0e;
+  }
+}
+
+/* ================================================================= */
+/* ============================ LOGIN PAGE ========================= */
+/* ================================================================= */
+
+.form-container {
+  width: 550px;
+  height: 370px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #171717;
+  padding: 20px;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+  margin: auto;
+}
+
+.form1 {
+  margin: 10px 0;
+  padding: 10px;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+  background-color: #171717;
+  border: 2px solid white;
+  color: #ffffff;
+}
+
+.p3 a {
+  color: rgb(152, 143, 129);
+  text-align: center;
+  font-family: 'RobotoM';
+  font-size: 14px;
+}
+
+.p2 {
+  text-align: center;
+  font-size: 50px;
+  color: rgb(232, 230, 227);
+  font-family: 'Vanguard';
+  margin: 0;
+  padding: 0 20px;
+}
+
+input[type="submit"], input[type="checkbox"] {
+  background-color: #171717;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #444;
+}
+
+.form1:hover {
+  background-color: #353434;
 }
