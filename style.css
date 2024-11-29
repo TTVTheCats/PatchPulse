@@ -94,6 +94,10 @@ a:hover {
   color: rgb(168, 168, 168);
 }
 
+.footr {
+  background-color: #0e0e0e;
+}
+
 .button-container {
   display: flex;
   flex-direction: row;
@@ -113,18 +117,59 @@ a:hover {
   line-height: 1.3;
 }
 
-.footr {
-  background-color: #0e0e0e;
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  flex: 1 0 auto;
 }
 
 footer {
+  flex-shrink: 0;
   background-color: #0e0e0e;
-  
 }
 
 .mainIcon {
   width: 20vw;  /* Use 'width' for resizing */
   height: auto; /* Maintain aspect ratio */
+}
+
+.form-container {
+  width: 50vw;
+  height: 370px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #171717;
+  padding: 20px;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+  margin: auto;
+}
+
+.form1 {
+  margin: 10px 0;
+  padding: 10px;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+  background-color: #171717;
+  border: 2px solid white;
+  color: #ffffff;
+}
+
+.qr-container {
+  display: none;
 }
 
 /* Medium screens */
@@ -142,12 +187,13 @@ footer {
     gap: 5vh; /* Add gap between flex items */
     padding-left: 0;
     padding-right: 0;
-    
+    margin: auto;
   }
 
   .flex-container {
     align-items: center; /* Ensure items are centered vertically */
     justify-content: space-evenly;
+    height: 6vh;
   }
 
   .vwImmageSizeble {
@@ -205,7 +251,7 @@ footer {
   }
 
   .footer-item {
-    font-size: 3vw; /* Adjust this value for smaller screens */
+    font-size: 4vw; /* Adjust this value for smaller screens */
   }
 
   .footr {
@@ -215,37 +261,52 @@ footer {
   footer {
     background-color: #0e0e0e;
   }
+
+  /* ================================================================= */
+  /* ============================ LOGIN PAGE ========================= */
+  /* ================================================================= */
+  .form-container {
+    width: 80vw;
+    height: 60vw;
+    min-width: 400px;
+    min-height: 300px;
+  }
+
+  .form1 {
+    margin: 10px 0;
+    padding: 10px;
+    width: 60vw;
+    min-width: 300px;
+    height: 7vw;
+    border: none;
+    border-radius: 5px;
+    background-color: #171717;
+    border: 2px solid white;
+    color: #ffffff;
+    font-size: 2vw;
+  }
+
+  .qr-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4vh;
+}
+
+.qr-code {
+    width: 30vw;
+    height: auto;
+    max-width: 200px;
+}
+  
 }
 
 /* ================================================================= */
 /* ============================ LOGIN PAGE ========================= */
 /* ================================================================= */
 
-.form-container {
-  width: 550px;
-  height: 370px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  background-color: #171717;
-  padding: 20px;
-  border-radius: 10px;
-  border: 3px solid #ffffff;
-  margin: auto;
-}
 
-.form1 {
-  margin: 10px 0;
-  padding: 10px;
-  width: 300px;
-  border: none;
-  border-radius: 5px;
-  background-color: #171717;
-  border: 2px solid white;
-  color: #ffffff;
-}
+
+
 
 .p3 a {
   color: rgb(152, 143, 129);
@@ -256,7 +317,7 @@ footer {
 
 .p2 {
   text-align: center;
-  font-size: 50px;
+  font-size: 4vh;
   color: rgb(232, 230, 227);
   font-family: 'Vanguard';
   margin: 0;
@@ -276,3 +337,4 @@ input[type="submit"]:hover {
 .form1:hover {
   background-color: #353434;
 }
+
